@@ -1,4 +1,4 @@
- A script that waits for a specific service to be up and running before it returns
+ A script that waits for a specific service to be up and running before it returns. A typical usecase would be for services that needs to be started in a certain order. A typical scanrio for this is synchronising Docker containers. 
 
 ### Example
 ```
