@@ -1,25 +1,24 @@
  A script that waits for a specific service to be up and running before it returns
 
- ex: waitforservice -n google -u http://www.google.com -c 10 -s 2000
-     tries to get a 200 response from the given URL by trying it 10 times with 2s inbetween
+### Example
+```
+$ waitforservice -n google -u http://www.google.com -c 10 -s 2000
+```
+Tries to get a 200 response from the given URL by trying it 10 times with 2s inbetween
 
- waitforservice -h
-     to get detailed commandline help
+### Usage
+```
+  usage: waitforservice [-h] -n [NAME] -u [URL] [-c [COUNT]] [-s [SLEEP]]
 
- author: Per Arneng
-
-h2. Usage
-usage: waitforservice [-h] -n [NAME] -u [URL] [-c [COUNT]] [-s [SLEEP]]
-
-optional arguments:
-  -h, --help            show this help message and exit
-  -n [NAME], --name [NAME]
+  optional arguments:
+    -h, --help            show this help message and exit
+    -n [NAME], --name [NAME]
                         the name of the service to wait for
-  -u [URL], --url [URL]
+    -u [URL], --url [URL]
                         the url ex: tcp://<host>:<port> or http://...
-  -c [COUNT], --count [COUNT]
+    -c [COUNT], --count [COUNT]
                         the nr of times to try. less than 1 means forever.
                         default = 100
-  -s [SLEEP], --sleep [SLEEP]
+    -s [SLEEP], --sleep [SLEEP]
                         sleep time in ms between tries. default = 1s
-
+```
